@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Security Monitor daily
+
+[Timer]
+# Run 10 minutes after boot
+OnBootSec=10min
+# Then run every 24 hours
+OnUnitActiveSec=1d
+# Keep the timer persistent (run immediately if missed while off)
+Persistent=true
+
+[Install]
+WantedBy=timers.target
